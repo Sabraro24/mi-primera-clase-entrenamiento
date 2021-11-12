@@ -16,9 +16,9 @@ public class Entrenamiento{
     public void incrementarKg(int kgIncrementado){
         kgLevantamiento = kgLevantamiento + kgIncrementado;
     }
-    
-    public void cambiarExito(boolean cambiarExito){
-        if (cambiarExito == true){
+
+    public void cambiarExito(boolean logrado){
+        if (logrado == true){
             exito = true;
         }
         else{
@@ -28,13 +28,25 @@ public class Entrenamiento{
 
     public void imprimeDetalles(){
         System.out.println("Tipo levantamiento: "+ tipoLevantamiento + 
-        ". Kg levantados: "+ kgLevantamiento + ". Levantamiento logrado: " 
-        + exito + ".");
+            ". Kg levantados: "+ kgLevantamiento + ". Levantamiento logrado: " 
+            + exito + ".");
     }
-    
+
     public String getEstado(){
         String estado;
         estado = tipoLevantamiento + kgLevantamiento + exito;
         return estado;
+    }
+
+    public String getTipoDeLevantamiento(){
+        return tipoLevantamiento;
+    }
+
+    public int getKgEnLevantamiento(){
+        return kgLevantamiento;
+    }
+
+    public boolean getLogrado(){
+        return exito;
     }
 }
