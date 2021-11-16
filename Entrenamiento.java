@@ -3,10 +3,10 @@ public class Entrenamiento{
     private int kgLevantamiento;
     private boolean exito;
 
-    public Entrenamiento(String tipoDeLevantamiento, int kgEnLevantamiento, boolean logrado){
+    public Entrenamiento(String tipoDeLevantamiento, int kgEnLevantamiento){
         tipoLevantamiento = tipoDeLevantamiento;
         kgLevantamiento = kgEnLevantamiento;
-        exito = logrado;
+        exito = true;
     }
 
     public void setTipoLevantamiento(String tipoDeLevantamiento){
@@ -34,7 +34,8 @@ public class Entrenamiento{
 
     public String getEstado(){
         String estado;
-        estado = tipoLevantamiento + kgLevantamiento + exito;
+        estado = ("Tipo levantamiento: "+ tipoLevantamiento + ". Kg levantados: "+ kgLevantamiento + ". Levantamiento logrado: " 
+            + exito + ".");
         return estado;
     }
 
